@@ -1,6 +1,37 @@
 
+
+def divide(dividend, divisor):
+    if divisor != 0:
+        print(dividend/divisor)
+    else:
+        print("You fool!")
+
+
+# positional arguemnts have to come before positional arguments
+divide(dividend=15, divisor=0)
+
+
+# positional arguments
+""" def say_hello(name, surname):
+    return f"Hello {name} {surname}, you piece of crud."
+
+
+print(say_hello("Bob", "Beluga"))
+
+# or
+
+#keyward arguments
+print(say_hello(surname="Jumpa", name="Kree")) """
+
+""" def add(x, y):
+    return x+y
+
+
+print(add(5, 3)) """
+
+
 # FUNCTIONS IN PYTHON
-def hello():
+""" def hello():
     print("Hello")
 
 
@@ -8,7 +39,7 @@ def user_age_in_seconds():
     user_age = int(input("What is your age?"))
     age_seconds = user_age * 365 * 24 * 60*60
     print(age_seconds)
-
+ """
 
 # run the function
 # user_age_in_seconds()
