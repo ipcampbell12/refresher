@@ -1,14 +1,27 @@
 
 
+# default values
+
+# y has default value, makes it optional
+# cannot have default peramter followed by non default peramter
+""" def add(x=5, y=12):
+    print(x+y)
+
+
+add(x=5, y=12)
+ """
+
+
+# only one return will run, so it's okay
 def divide(dividend, divisor):
     if divisor != 0:
-        print(dividend/divisor)
+        return dividend/divisor
     else:
-        print("You fool!")
+        return "You fool!"
 
 
 # positional arguemnts have to come before positional arguments
-divide(dividend=15, divisor=0)
+print(divide(dividend=15, divisor=0))
 
 
 # positional arguments
