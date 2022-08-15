@@ -21,7 +21,7 @@ def divide(dividend, divisor):
 
 
 # positional arguemnts have to come before positional arguments
-print(divide(dividend=15, divisor=0))
+# print(divide(dividend=15, divisor=0))`
 
 
 # positional arguments
@@ -389,3 +389,43 @@ doubled = [double(x) for x in sequence]
 doubled = [(lambda x: x*2)(x)for x in sequence]
 doubled = list(map(lambda x: x*2, sequence))
  """
+
+
+# dictionary comprehension
+""" users = [
+    (0, "Bob", "123fo"),
+    (1, "James", "45690"),
+    (2, "Jose", "tm90"),
+    (3, "Pooper", "fgh781")
+]
+
+
+username_mapping = {user[1]: user for user in users}
+
+print(username_mapping)
+
+
+username_input = input("Enter you username: ")
+password_input = input("Enter you password: ")
+
+# tuple unpacking, underscore is for the id, which won't be returned
+_, username, password = username_mapping[username_input]
+
+if password_input == password:
+    print("Your details are correct!")
+else:
+    print("Youre details are incorrect")
+ """
+
+student = {'name': 'Jose', 'school': 'Computing', 'grades': (66, 77, 88)}
+
+# Assume the argument, data, is a dictionary.
+# Modify the grades variable so it accesses the 'grades' key of the data dictionary.
+
+
+""" def average_grade(data):
+    grades = data['grades']
+    return sum(grades) / len(grades)
+
+
+print(average_grade(student)) """
