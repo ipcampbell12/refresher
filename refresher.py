@@ -452,8 +452,36 @@ def add(x, y):
 
 # passes one value for each parameter
 nums = [3, 5]
-print(add(*nums))
+# print(add(*nums))
 
 # can also use dictionary with name arguments
 nums = {'x': 15, 'y': 25}
-print(add(nums['x'], nums['y']))
+#print(add(nums['x'], nums['y']))
+
+# or
+
+print(add(**nums))
+
+
+# need tuple of tuples
+def multiply(*args):
+    print(args)
+    total = 1
+    for arg in args:
+        total = total * arg
+
+    return total
+
+# have to have named argument at the end of the arguments list
+
+
+def apply(*args, operator):
+    if operator == "*":
+        return multiply(*args)  # need to unpack tuple
+    elif operator == "+":
+        return sum(args)
+    else:
+        return "No valid operator provided."
+
+
+print(1, 3, 5, 6, 7, operator="+")
