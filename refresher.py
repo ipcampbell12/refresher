@@ -460,7 +460,7 @@ nums = {'x': 15, 'y': 25}
 
 # or
 
-print(add(**nums))
+# print(add(**nums))
 
 
 # need tuple of tuples
@@ -484,4 +484,60 @@ def apply(*args, operator):
         return "No valid operator provided."
 
 
-print(1, 3, 5, 6, 7, operator="+")
+#print(1, 3, 5, 6, 7, operator="+")
+
+
+# KWARGS
+# collects keyword arguments
+""" def named(**kwargs):
+    print(kwargs)
+
+
+named(name='Bob', age=25)
+ """
+
+
+""" def named(name, age):
+    print(name, age)
+
+
+details = {"name": "Bob", "age": 25}
+
+named(**details) """
+
+# 2 stars can be used in a function to collect named arguments into a dict
+# or they can be used in a function call to unpack a dict into keyword arguments
+
+
+""" def named(**kwargs):
+    print(kwargs)
+
+
+def print_nicely(**kwargs):
+    named(**kwargs)
+    for arg, value in kwargs.items():
+        print(f"{arg}: {value}")
+
+
+print_nicely(name="Bob", age=25) """
+# collect name arguments into dictionary
+# unpack dictionary into arguments
+
+# *args is for positional arguments,
+# **kwargs is for named arguments
+
+
+def both(*args, **kwargs):
+    print(args)
+    print(kwargs)
+
+
+both(1, 3, 5, name="bob", age=25)
+# used to accept an unlimited number of arguments
+# can be passed onto another function, from one function to another
+
+
+def myfunction(**kwargs):
+    print(kwargs)
+
+# must be dictionaries
