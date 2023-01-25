@@ -17,6 +17,10 @@ print(divide(6, 2))
 # print(sys.path)
 
 
-# show all the module that have been ijmported
+# show all the module that have been imported
+# python will check these modules to see if that import is there
+# when we import a file, it runs through the file
+# if you were to import the same thign many times, can run over and over withotu doing anyting
+# keeps track of what has already been imported
 
 print(sys.modules)
