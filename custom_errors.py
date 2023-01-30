@@ -17,7 +17,6 @@ class Book:
         )
 
     def read(self, pages: int):
-        # add custom error to keep you from reading too many pages
 
         if self.pages_read + pages > self.page_count:
             raise TooManyPagesReadError(
@@ -30,10 +29,9 @@ class Book:
 
 
 python101 = Book("Python 101", 50)
-# python101.read(35)
+python101.read(35)
 
-# # can't do this, but the program can't stop you!
-# python101.read(50)
+python101.read(50)
 
 
 # make it nicer for users
