@@ -17,7 +17,7 @@ class Book:
     # can validate what the book type is - make sure it's only ever hardcover or paperback (not comic book for example)
     # can say cls instead of class name
     # creates new book object of type hardcover
-    # access the class itself inside the method to create new obejcts
+    # access the class itself inside the method to create
     @classmethod
     def hardcover(cls, name, page_weight):
         return cls(name, cls.TYPES[0], page_weight+100)
